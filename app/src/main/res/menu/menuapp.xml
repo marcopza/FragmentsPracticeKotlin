@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/newitem"
+        android:icon="@drawable/outline_create_black_24dp"
+        android:title="Nueva" />
+    <item
+        android:id="@+id/listitem"
+        android:icon="@drawable/outline_ballot_black_24dp"
+        android:title="Lista" />
+</menu>
