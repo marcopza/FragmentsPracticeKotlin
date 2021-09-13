@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
 
         taskListFragment = TaskListFragment.newInstance()
 
+        //Suscripción
+        newTaskFragment.listener = taskListFragment
+
         showFragment(newTaskFragment)
 
         binding.navigator.setOnItemSelectedListener { menuItem ->

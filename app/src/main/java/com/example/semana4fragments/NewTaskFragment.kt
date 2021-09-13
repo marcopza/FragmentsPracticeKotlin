@@ -17,6 +17,9 @@ class NewTaskFragment : Fragment() {
     private var _binding: FragmentNewTaskBinding? = null
     private val binding get() = _binding!!
 
+    //Listener
+    var listener: OnNewTaskListener? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,6 +31,11 @@ class NewTaskFragment : Fragment() {
         binding.addBtn.setOnClickListener {
             val text = binding.newItemET.text.toString()
             Toast.makeText(activity, text, Toast.LENGTH_LONG).show()
+
+            //Publicación
+            listener?.let {
+                it.onNewTask(text)
+            }
         }
 
         return view
@@ -59,6 +67,10 @@ class NewTaskFragment : Fragment() {
         Log.e(">>>", "onDestroyView")
         super.onDestroyView()
         _binding = null
+    }
+
+    interface OnNewTaskListener{
+        fun onNewTask(task: String)
     }
 
     companion object {
