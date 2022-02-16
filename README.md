@@ -12,7 +12,4 @@ Clone the repo via git bash or your preferred tool. Then, import the project int
 - Fragments
 
 ## Tech
-
-Dillinger uses a number of open source projects to work properly:
-
 - [Kotlin](https://kotlinlang.org/)
